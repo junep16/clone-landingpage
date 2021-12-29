@@ -213,10 +213,13 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 8% 0;
 }
 
 .section-sub .sub-contents.one .image-wrapper {
@@ -292,7 +295,7 @@ html {
   margin-bottom: 60px;
 }
 
-.section-sub .sub-contents.two .wrapper-image {
+.section-sub .sub-contents.two .wrapper-window .wrapper-image {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -303,7 +306,7 @@ html {
   text-align: center;
 }
 
-.section-sub .sub-contents.two .wrapper-image div {
+.section-sub .sub-contents.two .wrapper-window .wrapper-image div {
   display: inline;
   -webkit-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
           box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
@@ -313,7 +316,7 @@ html {
   overflow: hidden;
 }
 
-.section-sub .sub-contents.two .wrapper-image div .image-sub {
+.section-sub .sub-contents.two .wrapper-window .wrapper-image div .image-sub {
   width: 100%;
   height: 100%;
   border-radius: 30px;
@@ -605,18 +608,6 @@ footer ul li a img {
     left: 85%;
     width: 32px;
   }
-  .main .section-main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   .main .section-main .contents-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -644,11 +635,12 @@ footer ul li a img {
     font-size: 0.9rem;
   }
   .main .section-main .image-main {
+    display: none;
     width: 190px;
     top: 70%;
     right: 20%;
   }
-  .main .section-sub .sub-contents.one {
+  .section-sub .sub-contents.one {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -656,24 +648,139 @@ footer ul li a img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    text-align: center;
   }
-  .main .section-sub .sub-contents.one .contents-wrapper {
+  .section-sub .sub-contents.one .image-wrapper {
     width: 100%;
+    height: 200px;
+  }
+  .section-sub .sub-contents.one .contents-wrapper {
+    width: 100%;
+    height: 300px;
     margin: 0;
   }
-  .main .section-sub .sub-contents.one .contents-wrapper .sub-text {
+  .section-sub .sub-contents.one .contents-wrapper .sub-text {
     font-size: 1.5rem;
     font-weight: bold;
   }
-  .main .section-sub .sub-contents.one .contents-wrapper .desc-text {
+  .section-sub .sub-contents.one .contents-wrapper .desc-text {
     font-size: 0.9rem;
-    line-height: 1.5;
+    line-height: 20px;
+  }
+  .section-sub .sub-contents.two .main-text {
+    font-size: 1.5rem;
+    line-height: 20px;
+    margin-bottom: 60px;
+  }
+  .section-sub .sub-contents.two .desc-text {
+    font-size: 0.9rem;
+    line-height: 20px;
+  }
+  .section-sub .sub-contents.two .wrapper-window {
+    width: 300px;
+    height: 300px;
+  }
+  .section-sub .sub-contents.two .wrapper-window .wrapper-image {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 1000px;
+    background-color: palevioletred;
+  }
+  .section-sub .sub-contents.two .wrapper-window .wrapper-image div {
+    width: 300px;
+    height: 300px;
+  }
+  .section-sub .sub-contents.two .contents-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .section-sub .sub-contents.two .contents-wrapper .desc-text {
+    width: 100%;
+    text-align: center;
+  }
+  .section-sub .sub-contents.two .contents-wrapper .button-learn {
+    margin-top: 20px;
+  }
+  .subscribe-container .content-wrapper .sub-contents.three {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 300px;
+    width: 100%;
+    height: 320px;
+    padding: 30px;
+  }
+  .subscribe-container .content-wrapper .sub-contents.three .text-wrapper {
+    width: 100%;
+  }
+  .subscribe-container .content-wrapper .sub-contents.three .text-wrapper .main-text {
+    font-size: 1.5rem;
+  }
+  .subscribe-container .content-wrapper .sub-contents.three .text-wrapper .desc-text {
+    font-size: 0.9rem;
+  }
+  .subscribe-container .content-wrapper .sub-contents.three .contact-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    height: 40px;
+  }
+  .subscribe-container .content-wrapper .sub-contents.three .contact-wrapper input {
+    width: 100%;
+    text-align: center;
+    height: 35px;
+  }
+  .subscribe-container .content-wrapper .sub-contents.three .contact-wrapper .button-subscribe {
+    position: absolute;
+    top: 60px;
+  }
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  footer img {
+    width: 100px;
+  }
+  footer ul li {
+    width: 32px;
+    height: 32px;
+  }
+  footer ul li a img {
+    width: 20px;
+  }
+  .button-top {
+    position: fixed;
+    bottom: 25px;
+    right: 690px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 40px;
+    border: 1px solid #C4C4C4;
   }
 }
 /*# sourceMappingURL=style.css.map */
