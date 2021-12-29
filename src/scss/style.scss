@@ -2,6 +2,8 @@
 @import "./reset.scss"; 
 @import "./mixin.scss"; 
 @import "./variable.scss"; 
+@import "./modal.scss";
+@import "./mediaquery.scss"; 
 
 * { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
 
@@ -223,19 +225,22 @@ html {
       border-radius: 30px;
       padding: 50px 60px;
       box-sizing: border-box; 
-    
-      .main-text {  
-        width: 100%;
-        text-align: left;
-        font-size: 2.3rem;
-        font-weight: 700; 
-        color: #FFF;   
-        margin-bottom: 15px;
-      }
-      .desc-text{  
-        text-align: left;
-        margin: 0;
-        color: #F2E9D8; 
+      .text-wrapper { 
+        padding: 10px;
+        box-sizing: border-box;
+        .main-text {  
+          width: 100%;
+          text-align: left;
+          font-size: 2.3rem;
+          font-weight: 700; 
+          color: #FFF;   
+          margin-bottom: 15px;
+        }
+        .desc-text{  
+          text-align: left;
+          margin: 0;
+          color: #F2E9D8;  
+        }
       }
       .contact-wrapper {
         display: flex;
