@@ -175,6 +175,8 @@ html {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .section-main .contents-wrapper .main-text {
@@ -186,6 +188,7 @@ html {
 .section-main .contents-wrapper .desc-text {
   font-size: 1rem;
   line-height: 20px;
+  margin-bottom: 20px;
 }
 
 .section-main .contents-wrapper .button-download {
@@ -371,6 +374,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   width: 70%;
+  margin-top: 90px;
 }
 
 .section-sub .sub-contents.two .contents-wrapper .desc-text {
