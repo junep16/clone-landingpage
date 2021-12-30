@@ -114,7 +114,11 @@ html {
 .header nav .navigation li {
   font-size: 1rem;
   text-decoration: none;
-  color: #FFF;
+  color: #000;
+}
+
+.header nav .navigation a {
+  color: inherit;
 }
 
 .header nav .button-download {
@@ -546,7 +550,7 @@ footer ul li a img {
 }
 
 .modal {
-  display: none;
+  display: block;
   position: fixed;
   left: 0;
   top: 0;
@@ -557,7 +561,7 @@ footer ul li a img {
 }
 
 .modal .modal-content {
-  background: url("../images/modal-bg-img.png");
+  background: url("../images/modal-bg-img.png") no-repeat;
   background-size: 600px 400px;
   border-radius: 30px;
   width: 600px;
@@ -621,9 +625,42 @@ footer ul li a img {
   }
   .header nav .navigation {
     display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-style: none;
+    color: #FFF;
+    background-color: #263140;
+    height: 100vh;
+    width: 50%;
+    margin: 0;
+    padding: 5%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
-  .header .button-download {
-    display: none;
+  .header nav .navigation a {
+    color: inherit;
+  }
+  .header nav .navigation li {
+    margin: 10% 0;
+    color: #FFF;
+  }
+  .header nav .navigation li:first-child::before {
+    display: block;
+    height: 50px;
+    background: url(../images/arrow-right.svg) no-repeat;
+    content: ".";
+    color: transparent;
+    margin-bottom: 30px;
+  }
+  .header nav .navigation .button-download {
+    margin-top: 50px;
+    width: 119px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .header nav .navigation.on {
+    display: block;
   }
   .header .nav-menu {
     display: block;
@@ -814,6 +851,32 @@ footer ul li a img {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 40px;
     border: 1px solid #C4C4C4;
+  }
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  .modal .modal-content {
+    width: 300px;
+    height: 300px;
+    background-size: 300px auto;
+    background-color: #F2E9D8;
+    margin: 50% auto;
+  }
+  .modal .modal-content img {
+    width: 60px;
+    height: auto;
+  }
+  .modal .modal-content .sub-text {
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
+  .modal .modal-content .desc-text {
+    font-size: 0.9rem;
+    line-height: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */
