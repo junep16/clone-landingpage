@@ -358,7 +358,6 @@ footer {
   border: 1px solid #C4C4C4;
 }
 
-
 .modal{
   display: none;
   position: fixed;
@@ -407,7 +406,7 @@ footer {
       color: #FFF;
     }
   }
-  .modal.on {
-    display: block;
-  }
+}
+.modal.on {
+  display: block;
 }
