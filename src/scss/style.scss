@@ -1,7 +1,6 @@
 @import "./reset.scss"; 
 @import "./mixin.scss"; 
-@import "./variable.scss";  
-// @import "./mediaquery.scss"; 
+@import "./variable.scss";   
 
 * { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
 
@@ -116,6 +115,7 @@ html {
 .section-sub {
   background: #FFF;  
   padding: 0 10%;
+  border: 1px;
 
   // first contents
   .sub-contents.one { 
@@ -125,6 +125,7 @@ html {
     margin: 10% 0;
 
     .image-wrapper{
+      border: 1px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -145,13 +146,16 @@ html {
       width: 40%;
       height: 200px;
       margin-left: 10%;
+      border: 1px;
       .sub-text {
         font-size: 2rem;
         font-weight: bold;
+        border: 1px;
       }
       .desc-text {
         font-size: 1rem;
         line-height: 20px;
+        border: 1px;
       }
     }
   }
@@ -234,6 +238,7 @@ html {
 }
 .subscribe-container{  
   margin: 10% 0;
+  border: 1px;
   .content-wrapper{
     padding: 0 10%; 
     .sub-contents.three { 
@@ -355,7 +360,7 @@ footer {
 
 
 .modal{
-  display: block;
+  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -404,260 +409,5 @@ footer {
   }
   .modal.on {
     display: block;
-  }
-}
-
-// mediaquery
-@media (max-width: 390px) {
-  // 헤더 
-
-  .header { 
-    width: 100vw;  
-    position: fixed;  
-
-    nav {   
-      padding: 0 10%;
-      height: 80px;
-
-    .logo-main {
-      width: 80px;
-      height: auto;
-    }
-    .navigation { 
-      display: none;
-      position: absolute;
-      top: 0;
-      right: 0; 
-      font-style: none;
-      color: #FFF;  
-      background-color: #263140; 
-      height: 100vh;
-      width: 50%;
-      margin: 0; 
-      padding: 5%; 
-      box-sizing: border-box;
-        a {
-          color: inherit;
-        }
-        li { 
-          margin: 10% 0;
-          color: #FFF;
-
-        }
-        li:first-child::before {  
-          display: block;
-          height: 50px;
-          background: url(../images/arrow-right.svg) no-repeat ;
-          content: "."; 
-          color: transparent;
-          margin-bottom: 30px;
-        }
-        .button-download {
-          margin-top: 50px;
-          width: 119px;
-          height: 40px;
-          font-size: 14px;
-        }
-      }
-      .navigation.on{
-        display: block;
-      }
-    }
-    .nav-menu { 
-      display: block;
-      position: absolute;
-      top: 25px;
-      left: 85%; 
-      width: 32px;
-    }
-  }
-
-  // 메인 
-
-  .main {  
-    height: 130vh;
-    .section-main { 
-      height: 100%;
-      .contents-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; 
-        text-align: center;
-        width: 100%;  
-        .main-text {
-          margin-top: 150px;
-          font-size: 1.5rem;
-          font-weight: 700;
-          line-height: 1.5; 
-        }
-        .desc-text {
-          font-size: 0.9rem;
-        } 
-        .button-download {
-          margin-top: 50px;
-        }
-        .image-main { 
-          margin-top: 20px;
-          width: 180px;   
-          position: static; 
-        }
-      }
-    } 
-  }
-  .section-sub {
-    .sub-contents.one {
-      display: flex;
-      flex-direction: column;
-      align-items: center;  
-      text-align: center;
-
-      .image-wrapper {
-        width: 100%;
-        height: 200px;
-      }
-      .contents-wrapper{
-        width: 100%;
-        height: 300px;
-        margin: 0;
-        .sub-text {
-          font-size: 1.5rem;
-          font-weight: bold;
-        }
-        .desc-text {
-          font-size: 0.9rem;
-          line-height: 20px;
-        }
-      }
-    }
-    .sub-contents.two {
-      .main-text {
-        font-size: 1.5rem;
-        line-height: 20px; 
-        margin-bottom: 60px;
-      }
-      .desc-text {
-        font-size: 0.9rem;
-        line-height: 20px; 
-      }
-      .wrapper-window {
-        width: 300px;
-        height: 300px; 
-
-        .wrapper-image { 
-          align-items: center; 
-          width: 1000px; 
-          div {
-            width: 300px;
-            height: 300px;  
-          }
-        }
-      }
-      .contents-wrapper {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%; 
-        height: 300px; 
-        .desc-text {
-          margin-top: 50px;
-          width: 100%; 
-          text-align: center;
-        }
-        .button-learn {
-          margin-top: 20px;
-        }
-      }
-    }
-  }
-  .subscribe-container { 
-    .content-wrapper { 
-      .sub-contents.three {
-        flex-direction: column;
-        margin-top: 300px;
-        width: 100%;
-        height: 320px;
-        padding: 30px;
-        .text-wrapper { 
-          width: 100%;
-          .main-text {
-            font-size: 1.5rem; 
-          }
-          .desc-text {
-            font-size: 0.9rem; 
-          }
-        }
-        .contact-wrapper {
-          flex-direction: column;
-          position: relative;
-          height: 40px;
-          input {
-            width: 100%;
-            text-align: center;
-            height: 35px;
-          } 
-          .button-subscribe {
-            position: absolute; 
-            top: 60px;
-          }
-        }
-      }
-    }
-  }
-  footer {
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    img {
-      width: 100px;
-    }
-    ul {
-      li {
-        width: 32px;
-        height: 32px; 
-        a{
-          img { 
-            width: 20px;
-          }
-        }
-      }
-    }
-  }
-  .button-top {
-    position: fixed; 
-    bottom: 25px; 
-    right: 690px;
-    width: 40px; 
-    height: 40px; 
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 40px;
-    border: 1px solid #C4C4C4;
-  }
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;  
-    .modal-content {
-      width: 300px;
-      height: 300px; 
-      background-size: 300px auto;
-      background-color: #F2E9D8;
-      margin: 50% auto;
-
-      img {
-        width: 60px;
-        height: auto;
-      }
-      .sub-text {
-        font-size: 1.5rem;  
-        line-height: 30px; 
-      }
-      .desc-text {
-        font-size: 0.9rem;
-        line-height: 1;
-      }
-    }
   }
 }
