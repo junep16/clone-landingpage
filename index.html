@@ -14,12 +14,12 @@
 <body>
   <header class="header">
     <nav>
-      <img src="/src/images/logo.png" alt="호두 로고" class="logo-main"> 
+      <img src="/src/images/portfolio_logo.png" alt="호두 로고" class="logo-main"> 
       <ul class="navigation">
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href>Support</a></li>
-        <button class="button-download" type="button">Download</button>
+        <li><a href="#main">About</a></li>
+        <li><a href="#about">Resume</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <button class="button-download" type="button">Portfolio</button>
       </ul>  
       <a href="#" class="nav-menu"><img src="/src/images/menu.svg" alt="메뉴"></a>
     </nav>
@@ -29,19 +29,23 @@
       <h1 class="sr-only">메인 페이지</h1>
       <div class="contents-wrapper">
         <p class="main-text">
-          Lorem Ipsum is simply dummy text of the printing and
+          #배움과 가르침, #협업, 그리고 #성장을<br>
+          가치 있게 여기는<br>
+          주니어 FE 개발자 박지윤입니다.
         </p>
         <p class="desc-text">
-          Lorem Ipsum is simply dummy text of the printing
-          and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-          ever since the 1500s, when an unknown
+          작품을 소개하고 교육하는 미술관 에듀케이터로 활동했으며, 현재는 JavaScript 북스터디를 리드하여 지식을 공유합니다.<br>
+          팀 프로젝트를 통해 서비스를 기획, 디자인, 개발 해보며 즐겁게 협업할 수 있는 방법을 고민합니다.<br>
+          1일 1 commit, 개발 블로그를 운영하여 꾸준한 공부를 통해 성장합니다.<br>
         </p>
-        <button class="button-download" type="button">Download</button>
-        <img src="/src/images/box-cat.png" alt="박스 쓴 고양이 이미지" class="image-main">
+        <button class="button-download" type="button">Portfolio</button>
+        <div class="image-wrapper">
+          <img src="/src/images/profile.jpg" alt="프로필 사진" class="image-main">
+        </div>
       </div>
     </article>
   </section> 
-      <article class="section-sub">
+      <article class="section-sub" id="about">
         <h2 class="sr-only">페이지 소개</h2> 
         <section class="sub-contents one">
           <div class="image-wrapper">
@@ -57,8 +61,8 @@
             </p>
           </div>
         </section> 
-        <section class="sub-contents two">
-            <p class="main-text">dummy text of the printing and dummy</p>
+        <section class="sub-contents two" id="#projects">
+            <p class="main-text">참여한 프로젝트</p>
             <p class="desc-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
             </p>
@@ -86,7 +90,7 @@
             </div>
             <div class="contact-wrapper"> 
               <input type="text" placeholder="Enter your e-mail address">
-              <button class="button-subscribe" type="button">Subscribe</button>
+              <button class="button-subscribe" type="button">Portfolio</button>
             </div> 
           </section>
           </div>

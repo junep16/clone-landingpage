@@ -66,7 +66,7 @@
     // 메인 
   
     .main {  
-      height: 130vh;
+      height: 150vh;
       .section-main { 
         height: 100%;
         .contents-wrapper {
@@ -88,10 +88,20 @@
           .button-download {
             margin-top: 50px;
           }
-          .image-main { 
+          .image-wrapper {
+            position: static;  
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 180px;
+            height: 180px;
+            border-radius: 180;
+            overflow: hidden;
             margin-top: 20px;
-            width: 180px;   
-            position: static; 
+            .image-main { 
+              width: 180px;  
+              height: auto;  
+            }
           }
         }
       } 
@@ -151,7 +161,8 @@
           align-items: center;
           justify-content: center;
           width: 100%; 
-          height: 300px;  
+          height: 300px;
+          margin-top: 45px;  
           .desc-text {
             margin-top: 50px;
             width: 100%; 
