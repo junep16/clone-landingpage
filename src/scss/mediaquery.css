@@ -1,4 +1,4 @@
-@media (max-width: 390px) {
+@media (max-width: 520px) {
   .header {
     width: 100vw;
     position: fixed;
@@ -58,10 +58,10 @@
     width: 32px;
   }
   .main {
-    height: 150vh;
+    height: 120vh;
   }
   .main .section-main {
-    height: 100%;
+    height: 120%;
   }
   .main .section-main .contents-wrapper {
     display: -webkit-box;
@@ -81,7 +81,6 @@
     width: 100%;
   }
   .main .section-main .contents-wrapper .main-text {
-    margin-top: 150px;
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.5;
@@ -93,7 +92,9 @@
     margin-top: 50px;
   }
   .main .section-main .contents-wrapper .image-wrapper {
-    position: static;
+    position: absolute;
+    top: 10%;
+    right: 20%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -112,6 +113,11 @@
   .main .section-main .contents-wrapper .image-wrapper .image-main {
     width: 180px;
     height: auto;
+  }
+  .section-sub .section-title {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 3;
   }
   .section-sub .sub-contents.one {
     display: -webkit-box;
