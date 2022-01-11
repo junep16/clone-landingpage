@@ -13,8 +13,9 @@
 </head>
 <body>
   <header class="header">
+    <h1 class="sr-only">네비게이션</h1>
     <nav>
-      <img src="/src/images/portfolio_logo.png" alt="호두 로고" class="logo-main"> 
+      <img src="/src/images/portfolio_logo.png" alt="지윤 로고" class="logo-main"> 
       <ul class="navigation">
         <li><a href="#main">About</a></li>
         <li><a href="#about">Resume</a></li>
@@ -26,7 +27,7 @@
   </header>
   <section class="main" id="main">
     <article class="section-main">
-      <h1 class="sr-only">메인 페이지</h1>
+      <h2 class="sr-only">About</h2>
       <div class="contents-wrapper">
         <p class="main-text">
           #배움과 가르침, #협업, 그리고 #성장을<br>
@@ -45,8 +46,8 @@
       </div>
     </article>
   </section> 
-      <article class="section-sub" id="about"> 
-        <h2 class="section-title">RESUME</h2>
+      <article class="section-sub" id="about">  
+        <h3 class="section-title">RESUME</h3>
         <section class="sub-contents one">
           <div class="image-wrapper">
             <img src="/src/images/img_4.jpg" alt="고양이 이미지" class="image-sub">
@@ -61,8 +62,8 @@
             </p>
           </div>
         </section> 
-        <section class="sub-contents two" id="#projects">
-            <p class="main-text">참여한 프로젝트</p>
+        <section class="sub-contents two" id="#projects"> 
+            <h4 class="main-text">Projects</h4>
             <p class="desc-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
             </p>
@@ -81,6 +82,7 @@
         </section> 
       </article>
       <article class="subscribe-container">
+        <h5 class="sr-only">구독</h4>
         <div class="content-wrapper">
           <section class="sub-contents three"> 
             <div class="text-wrapper">
@@ -89,7 +91,8 @@
               </p>
             </div>
             <div class="contact-wrapper"> 
-              <input type="text" placeholder="Enter your e-mail address">
+              <label class="sr-only" for="input-email">이메일을 입력해주세요</label>
+              <input type="text" id="input-email" placeholder="Enter your e-mail address">
               <button class="button-subscribe" type="button">Portfolio</button>
             </div> 
           </section>
